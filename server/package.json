@@ -1,0 +1,25 @@
+{
+  "name": "xmtp-agent",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx --watch index.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@virtuals-protocol/game": "^0.1.14",
+    "@xmtp/node-sdk": "*",
+    "openai": "4.94.0",
+    "viem": "^2.7.9",
+    "uint8arrays": "^4.0.6"
+  },
+  "devDependencies": {
+    "tsx": "*",
+    "typescript": "*",
+    "@types/node": "^20.11.19"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

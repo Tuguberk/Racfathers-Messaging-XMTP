@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  xmtp-agent:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    environment:
+      XMTP_ENV: ${XMTP_ENV}
+      WALLET_KEY: ${WALLET_KEY}
+      ENCRYPTION_KEY: ${ENCRYPTION_KEY}
+      GAME_AGENT_KEY: ${GAME_AGENT_KEY}
+    restart: unless-stopped
+
+

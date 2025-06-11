@@ -1,5 +1,5 @@
 # Aşama 1: Derleme
-FROM node:20-bullseye AS builder
+FROM node:20-bookworm AS builder
 WORKDIR /app
 
 # Bağımlılıkları kopyala ve yükle
@@ -11,7 +11,7 @@ COPY . .
 RUN npx tsc
 
 # Aşama 2: Çalıştırma
-FROM node:20-bullseye
+FROM node:20-bookworm
 WORKDIR /app
 
 # Yalnızca gerekli dosyaları kopyala (örneğin derlenmiş js dosyaları ve package dosyaları)
